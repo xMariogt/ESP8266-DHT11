@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura y Humedad </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.7/mqtt.min.js"></script>
+</head>
+
+<body>
+
+    <button id="mostrarMenu">Administrar</button>
+
+    <div class="menu" id="menuConfig">
+        <p>Configurar Temperatura en C</p>
+        <div class="temp-param">
+            <input type="number" value="45" id="Celsius" name="Temperatura en Celcius" min="0" max="60" />
+        </div>
+        <button id="cancelbtn">Cancelar</button>
+        <button id="okbtn">Ok</button>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="sensacionTermicaChart"></canvas>
+        </div>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+
+</html>
