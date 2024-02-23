@@ -10,7 +10,7 @@ CORS(app)
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'admin',
+    'password': 'Mariochava11',
     'database': 'practica3',
 }
 
@@ -44,9 +44,11 @@ def actualizar_bd():
 @app.get('/getLimite')
 def getTemp():
     try:
-        temp = cursor.execute("SELECT temp from temperatura WHERE id = 1")
+        cursor.execute("SELECT temp from temperatura WHERE id = 1")
 
-        return jsonify({'success': True})
+        temp = cursor.fetchone()
+
+        return jsonify({'success': True, 'value': temp})
     except Exception as e:
         return jsonify({'success': False,'error': str(e) })
 

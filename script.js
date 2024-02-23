@@ -58,6 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // Evento de conexión exitosa
 client.on('connect', function () {
     console.log('Conectado al MQTT broker via WebSocket');
+
+    fetch('http://127.0.0.1:5000/getLimite')
+    .then(res => res.json())
+    .then(response => {
+        console.log(response)
+        document.getElementById("Celsius").value = response.value
+    })
     
     // Suscribirse al tópico "inTopic" para recibir mensajes
     client.subscribe('inTopic', function (err) {
