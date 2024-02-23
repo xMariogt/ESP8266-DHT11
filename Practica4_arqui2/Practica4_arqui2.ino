@@ -15,13 +15,13 @@ float tempc, tempf, hume, htc, htf;
 //const char *password = "ARRIS4749.*";
 //const char *ssid = "iPhone de Mario";
 //const char *password = "mariochava";
-//const char *ssid = "CLARO_CGy3jj";
-//const char *password = "DBA7811F8A";
-const char *ssid = "Jeff";
-const char *password = "j04a07d99";
+const char *ssid = "CLARO_CGy3jj";
+const char *password = "DBA7811F8A";
+//const char *ssid = "Jeff";
+//const char *password = "j04a07d99";
 
 //MQTT
-const char *mqtt_server = "172.20.10.3";
+const char *mqtt_server = "192.168.1.45";
 const int mqtt_port = 1883;
 
 WiFiClient espClient;

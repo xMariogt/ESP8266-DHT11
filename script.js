@@ -64,6 +64,8 @@ client.on('connect', function () {
     .then(response => {
         console.log(response)
         document.getElementById("Celsius").value = response.value
+        temperaturaConfigurada = response.value
+        client.publish('UserTemp', temperaturaConfigurada.toString());
     })
     
     // Suscribirse al tópico "inTopic" para recibir mensajes
